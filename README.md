@@ -138,7 +138,7 @@ This project was completed as the submission for my final project with Open Univ
 ## DB Schema
 ![](02-design/db_schema/db_schema.jpg)
 
-# Backend PHP code
+## Backend PHP code
 [Account Factory](03-development/account_factory.php)
 
 [Account Interface](03-development/account_interface.php)
