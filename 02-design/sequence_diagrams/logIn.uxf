@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>14</x>
+      <y>182</y>
+      <w>1246</w>
+      <h>434</h>
+    </coordinates>
+    <panel_attributes>title: logIn()
+client~id1|facade:facade~id2|login_account:account~id4|factory:account_factory~id3|proxy:proxy_database~id5|real:real_database~id6
+id1-&gt;&gt;&gt;id2:id1,id2:facade() &lt;&lt;create&gt;&gt;
+id2-&gt;&gt;&gt;id5:id1,id2,id5:proxy_database() &lt;&lt;create&gt;&gt;
+id5-&gt;&gt;&gt;id6:id1,id2,id5,id6:real_database() &lt;&lt;create&gt;&gt;
+id6.&gt;id5:id1,id2,id5,id6:db
+id5.&gt;id2:id1,id2,id5,id6:proxy_db
+id1-&gt;&gt;&gt;id2:id1,id2,id5,id6:logIn(username : string, password : string)          
+id2-&gt;&gt;&gt;id2:id1,id2,id5,id6:readAccountSingle(username : string)
+id2-&gt;&gt;&gt;id3:id1,id2,id3,id5,id6:account_factory() &lt;&lt;create&gt;&gt;
+
+id2-&gt;&gt;&gt;id3:id1,id2,id3,id5,id6:readAccountSingle(username: string)
+id3-&gt;&gt;&gt;id5:id1,id2,id3,id5,id6:readAccountSingle(username : string)
+id5-&gt;&gt;&gt;id6:id1,id2,id3,id5,id6:readAccountSingle(username : string)
+id6.&gt;id5:id1,id2,id3,id5,id6:array
+id5.&gt;id3:id1,id2,id3,id5,id6:array
+id3.&gt;id2:id1,id2,id3,id5,id6:account
+id2-&gt;&gt;&gt;id4:id1,id2,id3,id4,id5,id6:authenticate(password : string)
+id4.&gt;id2:id1,id2,id3,id4,id5,id6:boolean
+id2.&gt;id1:id1,id2,id3,id4,id5,id6:boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

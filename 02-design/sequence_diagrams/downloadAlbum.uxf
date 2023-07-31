@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>3</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>159</x>
+      <y>192</y>
+      <w>711</w>
+      <h>546</h>
+    </coordinates>
+    <panel_attributes>title:downloadAlbum()
+client~id1|facade:facade~id2|factory:account_factory~id3|login_account:account~id4|artist_account:account~id5|artist_album:album~id6|purchase:purchase~id7|purchase_album:album~id8|proxy:proxy_database~id9|real:real_database~id10
+iframe{:ref
+id1&gt;&gt;id10:logIn()
+iframe}
+id1-&gt;&gt;&gt;id2:id1,id2,id9,id10:downloadAlbum()
+id2-&gt;&gt;&gt;id4:id1,id2,id4,id9,id10:getType()
+id4.&gt;id2:id1,id2,id4,id9,id10:int
+iframe{:opt
+id1&gt;&gt;id10:[logged into account is not customer]
+id2.&gt;id1:id2,id9,id10:null
+iframe}
+iframe{:opt
+id1&gt;&gt;id7:[logged into account is customer]
+id2-&gt;&gt;&gt;id2:id1,id2,id9,id10:readAccountSingle()
+id2-&gt;&gt;&gt;id3:id1,id2,id3,id9,id10:account_factory() &lt;&lt;create&gt;&gt;
+id2-&gt;&gt;&gt;id3:id1,id2,id3,id9,id10:getAccount()
+id3-&gt;&gt;&gt;id9:id1,id2,id3,id9,id10:readAccountSingle()
+id9-&gt;&gt;&gt;id10:id1,id2,id3,id9,id10:readAccountSingle()
+id10.&gt;id9:id1,id2,id3,id9,id10:array
+id9.&gt;3:id1,id2,id3,id9,id10:array
+id3.&gt;2:id1,id2,id3,id9,id10:account
+id2-&gt;&gt;&gt;id5:id1,id2,id3,id5,id9,id10:getAlbum()
+id5-&gt;&gt;&gt;id9:id1,id2,id3,id5,id9,id10:readAlbumSingle()
+id9-&gt;&gt;&gt;id10:id1,id2,id3,id5,id9,id10:readAlbumSingle()
+id10.&gt;id9:id1,id2,id3,id5,id9,id10:array
+id9.&gt;id5:id1,id2,id3,id5,id9,id10:array
+id5.&gt;id2:id1,id2,id3,id5,id9,id10:album
+id2-&gt;&gt;&gt;id6:id1,id2,id3,id5,id6,id9,id10:getId()
+id6.&gt;id2:id1,id2,id3,id5,id6,id9,id10:int
+id3-&gt;&gt;&gt;id4:id1,id2,id3,id4,id5,id6,id9,id10:getAllPurchases()
+id4-&gt;&gt;&gt;id9:id1,id2,id3,id4,id5,id6,id9,id10:readPurchaseMultiple()
+id9-&gt;&gt;&gt;id10:id1,id2,id3,id4,id5,id6,id9,id10:readPurchaseMultiple()
+id10.&gt;id9:id1,id2,id3,id4,id5,id6,id9,id10:array
+id9.&gt;id4:id1,id2,id3,id4,id5,id6,id9,id10:array
+iframe{:loop
+id1&gt;&gt;id10:[for each purchase in string array]
+id4-&gt;&gt;&gt;id7:id1,id2,id3,id4,id5,id6,id7,id9,id10:purchase() &lt;&lt;create&gt;&gt;
+id4-&gt;&gt;&gt;id8:id1,id2,id3,id4,id5,id6,id7,id8,id9,id10:album() &lt;&lt;create&gt;&gt;
+id4.&gt;id3:id1,id2,id3,id4,id5,id6,id7,id8,id9,id10:array
+iframe}
+iframe{:loop
+id1&gt;&gt;id10:[for each purchase in purchase array]
+id3-&gt;&gt;&gt;id7:id1,id2,id3,id4,id5,id6,id7,id8,id9,id10:getAlbum()
+id7.&gt;id3:id1,id2,id3,id4,id5,id6,id7,id8,id9,id10:album
+id3-&gt;&gt;&gt;id8:id1,id2,id3,id4,id5,id6,id7,id8,id9,id10:getId()
+id8.&gt;id3:id1,id2,id3,id4,id5,id6,id7,id8,id9,id10:int
+iframe}
+iframe{:opt
+id1&gt;&gt;id10:[ if artist_album.id equal to purchase_album.id ]
+id2-&gt;&gt;&gt;id5:id1,id2,id3,id4,id5,id6,id7,id8,id9,id10:download()
+id5.&gt;id2:id1,id2,id3,id4,id5,id6,id7,id8,id9,id10:string
+id2.&gt;id1:id1,id2,id3,id4,id5,id6,id7,id8,id9,id10:string
+iframe}
+iframe{:opt
+id1&gt;&gt;id10:[ if artist_album.id not equal to purchase_album.id ]
+id2.&gt;id1:id1,id2,id3,id4,id5,id6,id7,id8,id9,id10:string
+iframe}
+iframe}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>60</x>
+      <y>234</y>
+      <w>63</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>*Complete function call*
+#downloadAlbum(artist_username : string, album_title : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>246</y>
+      <w>45</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+</diagram>

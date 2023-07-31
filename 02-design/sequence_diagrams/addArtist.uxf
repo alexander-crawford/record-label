@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>5</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>220</x>
+      <y>215</y>
+      <w>870</w>
+      <h>385</h>
+    </coordinates>
+    <panel_attributes>title: addArtist()
+client~id1|facade:facade~id2|login_account:account~id3|factory:account_factory~id4|current_artist_account:account~id5|new_artist_account:account~id6
+iframe{:ref
+id1&gt;&gt;id6:logIn()
+iframe}
+id1-&gt;&gt;&gt;id2:id1,id2:addArtist()
+id2-&gt;&gt;&gt;id3:id1,id2,id3:getType()
+id3.&gt;id2:id1,id2,id3:int
+iframe{:opt
+id1&gt;&gt;id6:[account type is admin]
+id2-&gt;&gt;&gt;id4:id1,id2,id4:getAccount(username: string)
+id4.&gt;id2:id1,id2,id4:account
+id2-&gt;&gt;&gt;id5:id1,id2,id5:getAlbum(void, album_title : string)
+id5.&gt;id2:id1,id2,id5:album
+id2-&gt;&gt;&gt;id4:id1,id2,id4:getAccount(username: string)
+id4.&gt;id2:id1,id2,id4:account
+id2-&gt;&gt;&gt;id6:id1,id2,id6:addAlbum(album : album)
+id6.&gt;id2:id1,id2,id6:boolean
+id2.&gt;id1:id1,id2:boolean
+iframe}
+iframe{:opt
+id1&gt;&gt;id6:[account type is not admin]
+id2.&gt;id1:id2:void
+iframe}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>0</x>
+      <y>270</y>
+      <w>140</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>*Complete function call*
+addArtist(username : string, password : string, 
+current_artist_username : string, album_title : string,
+new_artist_username : string )</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>135</x>
+      <y>295</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+</diagram>

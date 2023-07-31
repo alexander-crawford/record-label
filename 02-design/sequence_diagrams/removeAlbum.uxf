@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>5</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>0</x>
+      <y>150</y>
+      <w>1405</w>
+      <h>535</h>
+    </coordinates>
+    <panel_attributes>title: removeAlbum()
+client~id1|facade:facade~id2|login_account:account~id3|factory:account_factory~id4|artist_account:account~id5|artist_album:album~id6|album_track:track~id7
+iframe{:ref
+id1&gt;&gt;id7:logIn()
+iframe}
+id1-&gt;&gt;&gt;id2:id1,id2:removeAlbum(artist_username : string, album_title : string)
+id2-&gt;&gt;&gt;id3:id1,id2,id3:getType()
+id3.&gt;id2:id1,id2,id3:int
+iframe{:opt
+id1&gt;&gt;id7:[ logged into account is type customer ]
+id2.&gt;id1:id2:void
+iframe}
+id2-&gt;&gt;&gt;id4:id1,id2,id4:getAccount(username: string)
+id4.&gt;id2:id1,id2,id4:account
+id2-&gt;&gt;&gt;id5:id1,id2,id5:getAlbum(void, album_title : string)
+id5.&gt;id2:id1,id2,id5:album
+iframe{:opt
+id1&gt;&gt;id7:[ logged into account is type artist ]
+id2-&gt;&gt;&gt;id3:id1,id2,id3:getId()
+id3.&gt;id2:id1,id2,id3:int
+id2-&gt;&gt;&gt;id5:id1,id2,id5:getId()
+id5.&gt;id2:id1,id2,id5:int
+iframe}
+iframe{:opt
+id1&gt;&gt;id7:[ logged into account is type admin ] OR [ logged into account and artist album account are the same ]
+id2-&gt;&gt;&gt;id6:id1,id2,id6:delete()
+id6.&gt;id2:id1,id2,id6:boolean
+id6-&gt;&gt;&gt;id6:id1,id2,id6:getAllTracks()
+iframe{:loop
+id1&gt;&gt;id7: [ for each track ]
+id6-&gt;&gt;&gt;id7:id1,id2,id6,id7:delete()
+iframe}
+id2.&gt;id1:id1,id2:boolean
+iframe}</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

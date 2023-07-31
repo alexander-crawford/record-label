@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>175</x>
+      <y>21</y>
+      <w>1232</w>
+      <h>791</h>
+    </coordinates>
+    <panel_attributes>title: removeAccount()
+client~id1|facade:facade~id2|factory:account_factory~id3|login_account:account~id4|delete_account:account~id5
+iframe{:ref
+id1&gt;&gt;id5:logIn()
+iframe}
+id1-&gt;&gt;&gt;id2:id1,id2:removeAccount(username : string, password : string)
+id2-&gt;&gt;&gt;id4:id1,id2,id4:getType()
+id4.&gt;id2:id1,id2,id4:int
+id2-&gt;&gt;&gt;id3:id1,id2,id3:getAccount(username: string)
+id3.&gt;id2:id1,id2,id3:account
+id2-&gt;&gt;&gt;id5:id1,id2,id5:getType()
+id5.&gt;id2:id1,id2,id5:int
+id2-&gt;&gt;&gt;id4:id1,id2,id4:getId()
+id4.&gt;id2:id1,id2,id4:int
+id2-&gt;&gt;&gt;id5:id1,id2,id5:getId()
+id5.&gt;id2:id1,id2,id5:int
+iframe{:opt
+id1&gt;&gt;id5:[logged into account is admin]
+iframe{:opt
+id1&gt;&gt;id5:[account ids are different]
+id2-&gt;&gt;&gt;id5:id1,id2,id5:delete()
+id5.&gt;id2:id1,id2,id5:true
+iframe}
+iframe}
+iframe{:opt
+id1&gt;&gt;id5:[logged into account is customer]
+iframe{:opt
+id1&gt;&gt;id5:[account ids are different]
+id2-&gt;&gt;&gt;id5:id1,id2,id5:delete()
+id5.&gt;id2:id1,id2,id5:true
+iframe}
+iframe}
+iframe{:opt
+id1&gt;&gt;id5:[logged into account is artist]
+id2.&gt;id1:id1,id2:void
+iframe}</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

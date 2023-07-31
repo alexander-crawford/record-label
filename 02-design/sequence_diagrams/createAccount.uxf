@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>175</x>
+      <y>42</y>
+      <w>1225</w>
+      <h>749</h>
+    </coordinates>
+    <panel_attributes>title: createAccount()
+client~id1|facade:facade~id2|factory:account_factory~id3|login_account:account~id4
+iframe{:ref
+id1&gt;&gt;id4:logIn()
+iframe}
+id1-&gt;&gt;&gt;id2:id1,id2:createAccount(account_type : int, username : string, password : string)
+id2-&gt;&gt;&gt;id4:id1,id2,id4:getType()
+id4.&gt;id2:id1,id2,id4:int
+iframe{:opt
+id1&gt;&gt;id4:[account type is admin]
+iframe{:opt
+id1&gt;&gt;id4:[create account type is not customer]
+id2-&gt;&gt;&gt;id3:id1,id2,id3:createAccount(account_type : int, username : string, password : string)
+id3.&gt;id2:id1,id2,id3:account
+id2.&gt;id1:id1,id2:account
+iframe}
+iframe}
+iframe{:opt
+id1&gt;&gt;id4:[account type is not admin]
+iframe{:opt
+id1&gt;&gt;id4:[create account type is admin]
+id2.&gt;id1:id1,id2:void
+iframe}
+iframe{:opt
+id1&gt;&gt;id4:[create account type is artist]
+id2.&gt;id1:id1,id2:void
+iframe}
+iframe{:opt
+id1&gt;&gt;id4:[create account type is customer]
+id2-&gt;&gt;&gt;id3:id1,id2,id3:createAccount(account_type : int, username : string, password : string)
+id3.&gt;id2:id1,id2,id3:account
+id2.&gt;id1:id1,id2:account
+iframe}
+iframe}</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

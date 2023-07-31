@@ -83,3 +83,57 @@ This project was completed as the submission for my final project with Open Univ
 |---|---|
 |I want| see the total revenue each month in a visual format|
 |So that| an appropriate budget can be created|
+
+## Use Case Diagram
+![](02-design/use_case_diagrams/use_case_diagram.jpg)
+
+## Album Download Activity Diagram
+![](02-design/activity_diagrams/album_download.jpg)
+
+## Album Upload Activity Diagram
+![](02-design/activity_diagrams/album_upload.jpg)
+
+## Class Diagram
+![](02-design/class_diagrams/class_diagram.jpg)
+
+## Add Artist Sequence Diagram
+![](02-design/sequence_diagrams/addArtist.jpg)
+
+## Approve Album Sequence Diagram
+![](02-design/sequence_diagrams/approveAlbum.jpg)
+
+## Create Account Sequence Diagram
+![](02-design/sequence_diagrams/createAccount.jpg)
+
+## Download Album Sequence Diagram
+![](02-design/sequence_diagrams/downloadAlbum.jpg)
+
+## Log In Sequence Diagram
+![](02-design/sequence_diagrams/logIn.jpg)
+
+## Purchase Album Sequence Diagram
+![](02-design/sequence_diagrams/purchaseAlbum.jpg)
+
+## Remove Acccount Sequence Diagram
+![](02-design/sequence_diagrams/removeAccount.jpg)
+
+## Remove Album Sequence Diagram
+![](02-design/sequence_diagrams/removeAlbum.jpg)
+
+## Remove ArtistSequence Diagram
+![](02-design/sequence_diagrams/removeArtist.jpg)
+
+## Remove Track Sequence Diagram
+![](02-design/sequence_diagrams/removeTrack.jpg)
+
+## Update Album Sequence Diagram
+![](02-design/sequence_diagrams/updateAlbum.jpg)
+
+## Update Track Sequence Diagram
+![](02-design/sequence_diagrams/updateTrack.jpg)
+
+## Upload Album Sequence Diagram
+![](02-design/sequence_diagrams/uploadAlbum.jpg)
+
+## DB Schema
+![](02-design/db_schema/db_schema.jpg)

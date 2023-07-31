@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>238</x>
+      <y>77</y>
+      <w>910</w>
+      <h>749</h>
+    </coordinates>
+    <panel_attributes>title: uploadAlbum()
+client~id1|facade:facade~id2|login_account:account~id3|album:album~id5|proxy:proxy_database~id6|real:real_database~id7
+iframe{:ref
+id1&gt;&gt;id7:logIn()
+iframe}
+id1-&gt;&gt;&gt;id2:id1,id2,id3,id6,id7:uploadAlbum()
+id2-&gt;&gt;&gt;id3:id1,id2,id3,id6,id7:getType()
+id3.&gt;id2:id1,id2,id3,id6,id7:int
+iframe{:opt
+id1&gt;&gt;id7:[ if logged into account is type artist ]
+id2-&gt;&gt;&gt;id3:id1,id2,id3,id6,id7:getID()
+id3.&gt;id2:id1,id2,id3,id6,id7:int
+id2-&gt;&gt;&gt;id6:id1,id2,id3,id6,id7:uploadAlbum(tracks:string[],album_title:string,artist_id:int)
+id6-&gt;&gt;&gt;id6:id1,id2,id3,id6,id7:createAlbum()
+id6-&gt;&gt;&gt;id7:id1,id2,id3,id6,id7:createAlbum()
+id7.&gt;id6:id1,id2,id3,id6,id7:array
+iframe{:loop
+id1&gt;&gt;id7:[ for each track in tracks ]
+// string $title,int $number,string $file,int $album_id
+id6-&gt;&gt;&gt;id6:id1,id2,id3,id6,id7:createTrack()
+id6-&gt;&gt;&gt;id7:id1,id2,id3,id6,id7:createTrack()
+id7.&gt;id6:id1,id2,id3,id6,id7:array
+iframe}
+id6-&gt;&gt;&gt;id6:id1,id2,id3,id6,id7:createArtistAlbum()
+id6-&gt;&gt;&gt;id7:id1,id2,id3,id6,id7:createArtistAlbum()
+id7.&gt;id6:id1,id2,id3,id6,id7:array
+id6.&gt;id2:id1,id2,id3,id6,id7:array
+id2-&gt;&gt;&gt;id5:id1,id2,id3,id5,id6,id7:album() &lt;&lt;create&gt;&gt;
+id2.&gt;id1:id1,id2,id3,id5,id6,id7:album
+iframe}
+iframe{:opt
+id1&gt;&gt;id7:[ if logged into account is not type artist ]
+id2-&gt;&gt;&gt;id5:id1,id2,id3,id5,id6,id7:album() &lt;&lt;create&gt;&gt;
+id2.&gt;id1:id1,id2,id3,id5,id6,id7:album
+iframe}
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>7</x>
+      <y>175</y>
+      <w>140</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>*Complete function call*
+uploadAlbum(tracks : string&lt;track_title, track_number, track_file&gt;, album_title : string)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>210</y>
+      <w>112</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>0</x>
+      <y>707</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>*Note on returned album*
+A blank album is returned where the logged into account is not of type artst, a blank album has an id of -1.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>749</y>
+      <w>112</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+</diagram>
