@@ -137,3 +137,21 @@ This project was completed as the submission for my final project with Open Univ
 
 ## DB Schema
 ![](02-design/db_schema/db_schema.jpg)
+
+# Backend PHP code
+[Account Factory](03-development/account_factory.php)
+[Account Interface](03-development/account_interface.php)
+[Admin Account Class](03-development/admin_account.php)
+[Album Class](03-development/album.php)
+[Artist Account Class](03-development/artist_account.php)
+[Customer Account Class](03-development/customer_account.php)
+[Database Interface](03-development/database_interface.php)
+[Facade Class](03-development/facade.php)
+[Proxy Database](03-development/proxy_database.php)
+[Purchase Class](03-development/purchase.php)
+[Real Database Class](03-development/real_database.php)
+[Track Class](03-development/track.php)
+
+## SQL Statements and Table Creations
+[CRUD Statements](03-development/crud.sql)
+[Table Creations](03-development/tables.sql)
