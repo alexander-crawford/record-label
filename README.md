@@ -7,7 +7,7 @@ This project was completed as the submission for my final project with Open Univ
 ![](00-planning/gantt.png)
 
 ## Current Activity Diagram
-![](01-analysis/current activity diagram for album purchase.jpg)
+![](01-analysis/current_activity_diagram_for_album_purchase.jpg)
 
 ## Current Data Model
 ![](01-analysis/data_model.jpg)
