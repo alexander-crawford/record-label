@@ -10,7 +10,7 @@ This project was completed as the submission for my final project with Open Univ
 ![](01-analysis/current activity diagram for album purchase.jpg)
 
 ## Current Data Model
-![](01-analysis/data model.jpg)
+![](01-analysis/data_model.jpg)
 
 
 ## User stories
