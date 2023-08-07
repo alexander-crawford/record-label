@@ -1,5 +1,5 @@
 # Record Label 
-This project was completed as the submission for my final project with Open University project, here is a selection of the diagrams and code that were created for it. 
+This project was completed as the submission for my final project with the Open University, here is a selection of the diagrams and code that were created for it. 
 
 > The UML diagrams were created with [UMLet](https://www.umlet.com/), the source files for each of the images shown can be found in the relevant folders.
 
